@@ -3,10 +3,34 @@
 @import "./maps";
 @import "./mixins";
 @import "./functions.scss";
-
+@import "./lists";
 
 //Generics
-:root{
-    font-size: 0.785rem;
+:root {
+    font-size: map-get($font-sizes, "initial": )
     box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-color;
+    padding-top: nth($padding, -1 );
+    padding: nth($padding , -1 )nth($padding, 3 );
+    font-family: $rubik;
+    font-weight: map-get($map: $rubik, $key:"regular" );
+
+    h1 {
+        font-family: $titillium;
+        font-weight: map-get($map:$titillium , "Black" );
+    }
+
+    .main {
+        width: 80%;
+        border: 1px solid $dark;
+        border-radius: $br-1;
+        padding: 1em 2em;
+        margin: 2em auto;
+        background-image: url();
+        background-position: center center;
+        background-size: cover ;
+    }
 }
