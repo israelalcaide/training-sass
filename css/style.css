@@ -8,15 +8,15 @@
 }
 
 :root {
-  font-size: 0.785rem;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
 body {
   background-color: #198754;
-  padding-top: 3em;
-  padding: 3em 1em;
-  font-family: "rubik", sans-serif;
+  padding: 1em 3em;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
 }
 body .main {
   width: 80%;
@@ -24,7 +24,64 @@ body .main {
   border-radius: 0.3rem;
   padding: 1em 2em;
   margin: 2em auto;
-  background-image: url();
+  margin-top: 30px;
+  margin-top: 5em;
+  background-image: url("../img/pic02.jpg");
   background-position: center center;
   background-size: cover;
+}
+body .main-header {
+  font-size: 3.5rem;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  transition: color 0.3s ease-in-out;
+}
+body .main-header:hover {
+  color: #fd7e14;
+}
+body .message, body .message-success, body .message-warning, body .message-danger, body .message-info {
+  padding: 0.5em 1.5em;
+  border-radius: 0.3rem;
+  width: 70%;
+  margin: 1em auto;
+}
+body .message-info {
+  color: #013889;
+  background-color: #408cfd;
+  border: 1px solid #0d6efd;
+}
+body .message-danger {
+  color: #7c151f;
+  background-color: #e4606d;
+  border: 1px solid #dc3545;
+}
+body .message-warning {
+  color: #876500;
+  background-color: #ffce3a;
+  border: 1px solid #ffc107;
+}
+body .message-success {
+  color: #051b11;
+  background-color: #21b26f;
+  border: 1px solid #198754;
+}
+body header {
+  background-color: #292a2b;
+  padding: getPadding 2 getPadding 3;
+}
+body header nav {
+  width: 50%;
+}
+body header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header ul li {
+  background-color: yellow;
+  padding: getPadding 2 getPadding 3;
+  border-radius: 0.2rem;
+}
+body header ul li a {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

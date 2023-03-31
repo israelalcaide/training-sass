@@ -1,36 +1,99 @@
 @import "./reset";
 @import "./variables";
-@import "./maps";
 @import "./mixins";
-@import "./functions.scss";
+@import "./maps";
+@import "./functions";
 @import "./lists";
 
-//Generics
+// Generics
 :root {
-    font-size: map-get($font-sizes, "initial": )
-    box-sizing: border-box;
+  font-size: fs("medium");
+  box-sizing: border-box;
 }
-
+@each $header, $value in $header-sizes {  
+  #($header){
+    font-size:#($value);
+  }
+}
 body {
-    background-color: $bg-color;
-    padding-top: nth($padding, -1 );
-    padding: nth($padding , -1 )nth($padding, 3 );
-    font-family: $rubik;
-    font-weight: map-get($map: $rubik, $key:"regular" );
+  &.light {
+    @include theme(false);
+  }
+  background-color: $bg-color;
+  padding: getPadding(3) getPadding(-1);
+  font-family: getFont(true);
+  font-weight: rfw("Regular");
 
-    h1 {
-        font-family: $titillium;
-        font-weight: map-get($map:$titillium , "Black" );
+  .main {
+    width: 80%;
+    border: 1px solid $dark;
+    border-radius: $br-1;
+    padding: 1em 2em;
+    margin: 2em auto;
+    margin-top: $margin-top;
+    margin-top: $mt-3;
+    background-image: url(getImg("pic02", "jpg"));
+    background-position: center center;
+    background-size: cover;
+    &-header {
+      font-size: fs("xx-large");
+      font-family: getFont(false);
+      font-weight: tfw("Black");
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: $orange;
+      }
     }
+  }
+  .message {
+    padding: getPadding(2) getPadding(4);
+    border-radius: getRadius(2);
+    width: 70%;
+    margin: 1em auto;
+  }
+  .message-info {
+    @extend .message;
+    @include color-theme($blue);
+  }
+  .message-danger {
+    @extend .message;
+    @include color-theme($red);
+  }
+  .message-warning {
+    @extend .message;
+    @include color-theme($yellow);
+  }
+  .message-success {
+    @extend .message;
+    @include color-theme($green);
+  }
+  header {
+    background-color: $dark;
+    padding: getPadding (2) getPadding (3);
+    nav {
+      width: 50%;
+    }
+    ul {
+      @include flexCenter(space-between);
+      li {
+        background-color: yellow;
+        padding: getPadding (2) getPadding (3);
+        border-radius: getRadius(1);
+        a {
+          color: darken($color: #000000, $amount: 10%);
+        }
+      }
+    }
+  }
+  p {
+    padding: getPadding (2) getPadding (3);
+    border-radius: getRadius(2);
+    font-size: fs("medium");
+    @for $value from 1 through lenght($rainbow) {
+      &:nth-child(#{$value}){
+        background: getRcolor($value);
 
-    .main {
-        width: 80%;
-        border: 1px solid $dark;
-        border-radius: $br-1;
-        padding: 1em 2em;
-        margin: 2em auto;
-        background-image: url();
-        background-position: center center;
-        background-size: cover ;
+      }
     }
+  }
 }

@@ -1,4 +1,4 @@
-//Declaracion de variables
+//MAPA DE COLORES BASICO
 $blue: #0d6efd;
 $indigo: #6610f2;
 $purple: #6f42c1;
@@ -11,21 +11,29 @@ $teal: #20c997;
 $cyan: #0dcaf0;
 $dark: #292a2b;
 $green-white: #edf4eb;
+$dark-green: darkolivegreen;
 $white: #fff;
 $gray: #adb5bd;
+//ANCHO Y ALTO AL 100% DEL VIEWPORT
 $full-width: 100vw;
 $full-height: 100vh;
+//PROBAMOS POSIBILIDADES DE SASS
 $bg-color: $green;
 $br-1: 0.3rem;
 $border-width: "1px";
 $border-style: "solid";
 $border-color: $dark;
-
+// RUTA ESTANDAR IMAGENES
 $base-path: "../img/";
-$file-name: "pic02.jpg";
-$path: $base-path + $file-name;
+$file-name: "pic02";
+$file-extension: "jpg";
+$path: $base-path + $file-name + "." + $file-extension;
+$path:"../img/pic02.jpg";
+// valores numéricos
+$margin-top: 30 * 1px;
+$mt-3: 5 * 1em;
+$mt-2: 3em;
 
-
-//fuentes
-$rubik:'rubik', sans-serif;
-$titillium: 'Titilium Web', sans-serif;
+// fuentes
+$rubik: 'Rubik', sans-serif;
+$titillium:'Titillium Web', sans-serif;

@@ -1,0 +1,22 @@
+@mixin color-theme($color-th) {
+  color: darken($color: $color-th, $amount: 25%);
+  background-color: lighten($color: $color-th, $amount: 10%);
+  border: 1px solid $color-th;
+}
+@mixin flexCenter($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten($bg-color, 50%);
+    p {
+      color: darken($bg-color, 25%) !important;
+    }
+  }
+}

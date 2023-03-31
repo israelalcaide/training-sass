@@ -1,4 +1,4 @@
-$font-sizes: (
+$font-sizes:(
     "small":0.5rem,
     "initial":0.785rem,
     "medium":1rem,
@@ -6,8 +6,6 @@ $font-sizes: (
     "x-large":2rem,
     "xx-large":3.5rem,
 );
-
-
 $titillium-fw:(
     "ExtraLight":200,
     "Light":300,
@@ -25,3 +23,13 @@ $rubik-fw:(
     "ExtraBold":800,
     "Black":900, 
 );
+$header-sizes:(
+    "h1":3.5rem,
+    "h2":3.5rem,
+    "h3":3.5rem,
+    "h4":3.5rem,
+    "h5":3.5rem,
+    "h6":3.5rem,
+    "h7":3.5rem,
+
+)
